@@ -1,10 +1,4 @@
-# Python program for implementation of Quicksort Sort
-
-# This implementation utilizes pivot as the last element in the nums list
-# It has a pointer to keep track of the elements smaller than the pivot
-# At the very end of partition() function, the pointer is swapped with the pivot
-# to come up with a "sorted" nums relative to the pivot
-
+# Python program for implementation of Quicksort 
 
 # Function to find the partition position
 def partition(array, low, high):
@@ -14,8 +8,6 @@ def partition(array, low, high):
 
 	# pointer for greater element
 	i = low - 1
-
-	# traverse through all elements
 	# compare each element with pivot
 	for j in range(low, high):
 		if array[j] <= pivot:
@@ -33,15 +25,10 @@ def partition(array, low, high):
 	# Return the position from where partition is done
 	return i + 1
 
-# function to perform quicksort
-
 
 def quickSort(array, low, high):
 	if low < high:
 
-		# Find pivot element such that
-		# element smaller than pivot are on the left
-		# element greater than pivot are on the right
 		pi = partition(array, low, high)
 
 		# Recursive call on the left of pivot
