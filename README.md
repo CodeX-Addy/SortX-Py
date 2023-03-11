@@ -1,1 +1,1 @@
-This repo includes various sorting algorithms in python programming
+This repo includes codes of various sorting algorithms in python programming
