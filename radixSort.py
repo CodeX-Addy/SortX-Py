@@ -1,13 +1,10 @@
 # Radix sort in Python
 
-
-# Using counting sort to sort the elements in the basis of significant places
 def countingSort(array, place):
     size = len(array)
     output = [0] * size
     count = [0] * 10
-
-    # Calculate count of elements
+    #Calculate count of elements
     for i in range(0, size):
         index = array[i] // place
         count[index % 10] += 1
@@ -16,7 +13,7 @@ def countingSort(array, place):
     for i in range(1, 10):
         count[i] += count[i - 1]
 
-    # Place the elements in sorted order
+    # Placing the elements in sorted order
     i = size - 1
     while i >= 0:
         index = array[i] // place
@@ -28,7 +25,7 @@ def countingSort(array, place):
         array[i] = output[i]
 
 
-# Main function to implement radix sort
+#Radix Sort function
 def radixSort(array):
     # Get maximum element
     max_element = max(array)
