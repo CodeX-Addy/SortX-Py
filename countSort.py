@@ -3,13 +3,13 @@ def countingSort(array):
     size = len(array)
     output = [0] * size
 
-    # Initialize count array
+    # Initializing count array
     count = [0] * 10
 
     for i in range(0, size):
         count[array[i]] += 1
 
-    # Store the cummulative count
+    # Storing the cummulative count
     for i in range(1, 10):
         count[i] += count[i - 1]
 
@@ -19,7 +19,7 @@ def countingSort(array):
         count[array[i]] -= 1
         i -= 1
 
-    # Copy the sorted elements into original array
+    # Copying the sorted elements into original array
     for i in range(0, size):
         array[i] = output[i]
 
