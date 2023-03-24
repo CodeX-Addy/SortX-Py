@@ -1,6 +1,4 @@
-# Counting sort in Python programming
-
-
+#Counting sort on python
 def countingSort(array):
     size = len(array)
     output = [0] * size
@@ -8,7 +6,6 @@ def countingSort(array):
     # Initialize count array
     count = [0] * 10
 
-    # Store the count of each elements in count array
     for i in range(0, size):
         count[array[i]] += 1
 
@@ -16,8 +13,6 @@ def countingSort(array):
     for i in range(1, 10):
         count[i] += count[i - 1]
 
-    # Find the index of each element of the original array in count array
-    # place the elements in output array
     i = size - 1
     while i >= 0:
         output[count[array[i]] - 1] = array[i]
